@@ -31,3 +31,18 @@ body {
   background:rgb(14,14,14);
   color: whitesmoke;
 }
+
+.p-accent-right {
+  padding-right: 30px;
+  position: relative;
+}
+.p-accent-right:after {
+  content: '';
+  display: block;
+  height: 50%;
+  position: absolute;
+  width: 4px;
+  top: 8px;
+  right: 0;
+  background: theme('colors.pip-purple')
+}

@@ -1,6 +1,7 @@
 import Alert from "./alert";
 import Footer from "./footer";
 import Meta from "./meta";
+import NavLinks from "../components/nav-links";
 
 type Props = {
   preview?: boolean;
@@ -16,6 +17,7 @@ const ProjectLayout = ({ preview, children }: Props) => {
         <main>{children}</main>
       </div>
       {/* <Footer /> */}
+      <NavLinks />
     </>
   );
 };

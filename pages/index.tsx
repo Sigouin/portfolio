@@ -31,20 +31,23 @@ export default function Index({ allPosts }: Props) {
         <Container>
           <section className="bg-stella-purple page-wrap p-16">
             <header>
-              <span>Hello, I&apos;m</span>
-              <h1>Matt Sigouin</h1>
+              <span className="text-2xl">Hello, I&apos;m</span>
+              <h1 className="text-7xl leading-none">Matt Sigouin</h1>
             </header>
 
-            <main className="flex items-center flex-grow py-8">
-              <aside>
-                <Image
-                  src={pic}
-                  alt="Matt and Stella. For real."
-                  height={600}
-                  width={438}
-                />
+            <main className="flex flex-col lg:flex-row justify-between items-center flex-grow py-8">
+              <aside className="max-w-sm">
+                <figure className="overflow-hidden rounded-md shadow-2xl">
+                  <Image
+                    className="scale-105"
+                    src={pic}
+                    alt="Matt and Stella. For real."
+                    height={600}
+                    width={438}
+                  />
+                </figure>
               </aside>
-              <div className="text-right text-sm">
+              <div className="flex flex-col gap-6 text-right text-lg leading-tight max-w-xl p-accent-right">
                 <p>
                   Hello world! After spending the last 14 years going from a
                   medical biller to an Executive manager I decided it was time

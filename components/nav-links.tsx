@@ -2,44 +2,59 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useRouter } from "next/router";
 import { BiLogoGithub, BiLogoLinkedin } from "react-icons/bi";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import projects from "../data/projects";
+import { paths } from "../data/paths";
+import SeñorLinkenStein from "../utilities/SeñorLinkenStein";
 
-// /dashdoor
-// <a href="" target="_blank" rel="noreferrer">
-// <a href="https://github.com/Sigouin" target="_blank" rel="noreferrer">
-
-// const socialLinks = [];
+// Sálvame por favor
+// no recuerdo como hablar ingles
+// 😭
 export default function NavLinks() {
   const pathname = usePathname();
+  const router = useRouter();
 
   return (
-    <nav className="">
-      <h2>Projects</h2>
-      <div className="flex items-center justify-between w-full">
-        <ul className="flex gap-4">
-          {projects.map((navItem) => (
-            <li key={navItem.id}>
-              {/* TODO: DO THIS 👇 THE RIGHT WAY */}
-              <Link href={`projects/${navItem.id}`}>{navItem.name}</Link>
-            </li>
-          ))}
+    <nav className="mt-12">
+      <h2 className="text-4xl">Projects</h2>
+      <div className="flex items-center justify-between mt-4 w-full">
+        <ul className="flex gap-4 ml-12 text-2xl">
+          {projects.map(({ id, name }, i) => {
+            const aaaaaaasssss = paths.projects(id).toString();
+            return (
+              <li
+                key={id}
+                className={i !== 0 ? "before:content-['|'] before:pr-4" : ""}
+              >
+                <SeñorLinkenStein aDonde={aaaaaaasssss}>
+                  <button
+                    className={
+                      router.asPath === aaaaaaasssss ? `bg-[#ff00ff]` : ""
+                    }
+                  >
+                    {name}
+                  </button>
+                </SeñorLinkenStein>
+              </li>
+            );
+          })}
         </ul>
         <ul className="flex gap-2">
           <li>
             <a href="https://github.com/Sigouin" target="_blank">
-              <BiLogoGithub />
+              <BiLogoGithub className="text-2xl" />
             </a>
           </li>
           <li>
             <a href="https://linkedin.com/in/matt-sigouin" target="_blank">
-              <BiLogoLinkedin />
+              <BiLogoLinkedin className="text-2xl" />
             </a>
           </li>
           <li>
             <a href="mailto:matt@sigouin.codes">
-              <MdOutlineAlternateEmail />
+              <MdOutlineAlternateEmail className="text-2xl" />
             </a>
           </li>
         </ul>
