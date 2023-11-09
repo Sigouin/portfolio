@@ -1,28 +1,38 @@
-import Container from '../components/container'
-import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
-import Layout from '../components/layout'
-import { getAllPosts } from '../lib/api'
-import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
-import Post from '../interfaces/post'
+import Container from "../components/container";
+import MoreStories from "../components/more-stories";
+import HeroPost from "../components/hero-post";
+import Intro from "../components/intro";
+import Layout from "../components/layout";
+import { getAllPosts } from "../lib/api";
+import Head from "next/head";
+import { CMS_NAME } from "../lib/constants";
+import Post from "../interfaces/post";
+import pic from "public/assets/Images/pic.png";
+import Image from "next/image";
 
 type Props = {
-  allPosts: Post[]
-}
+  allPosts: Post[];
+};
 
 export default function Index({ allPosts }: Props) {
-  const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
+  const heroPost = allPosts[0];
+  const morePosts = allPosts.slice(1);
   return (
     <>
       <Layout>
         <Head>
           <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
         </Head>
-        <Container>
-          <Intro />
+        <div className="flex justify-center items-center h-full">
+          <Image
+            className="rounded-lg b w-120 shadow-[0_45px_60px_-15px_rgba(0,0,0,0.3)]"
+            src={pic}
+            alt="Rhino Man"
+          />
+          <h1>Coming Soon</h1>
+        </div>
+        {/* <Container> */}
+        {/* <Intro />
           {heroPost && (
             <HeroPost
               title={heroPost.title}
@@ -34,23 +44,23 @@ export default function Index({ allPosts }: Props) {
             />
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        </Container>
+        </Container> */}
       </Layout>
     </>
-  )
+  );
 }
 
 export const getStaticProps = async () => {
   const allPosts = getAllPosts([
-    'title',
-    'date',
-    'slug',
-    'author',
-    'coverImage',
-    'excerpt',
-  ])
+    "title",
+    "date",
+    "slug",
+    "author",
+    "coverImage",
+    "excerpt",
+  ]);
 
   return {
     props: { allPosts },
-  }
-}
+  };
+};
