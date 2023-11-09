@@ -22,17 +22,15 @@ export default function NavLinks() {
       <div className="flex items-center justify-between mt-4 w-full">
         <ul className="flex gap-4 ml-12 text-2xl">
           {projects.map(({ id, name }, i) => {
-            const aaaaaaasssss = paths.projects(id).toString();
+            const asPath = paths.projects(id).toString();
             return (
               <li
                 key={id}
                 className={i !== 0 ? "before:content-['|'] before:pr-4" : ""}
               >
-                <SeñorLinkenStein aDonde={aaaaaaasssss}>
+                <SeñorLinkenStein aDonde={asPath}>
                   <button
-                    className={
-                      router.asPath === aaaaaaasssss ? `bg-[#ff00ff]` : ""
-                    }
+                    className={router.asPath === asPath ? `bg-[#ff00ff]` : ""}
                   >
                     {name}
                   </button>
