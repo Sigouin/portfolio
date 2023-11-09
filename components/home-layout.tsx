@@ -7,7 +7,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-const Layout = ({ preview, children }: Props) => {
+const HomeLayout = ({ preview, children }: Props) => {
   return (
     <>
       <Meta />
@@ -20,4 +20,4 @@ const Layout = ({ preview, children }: Props) => {
   );
 };
 
-export default Layout;
+export default HomeLayout;
