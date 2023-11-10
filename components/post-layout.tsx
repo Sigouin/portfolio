@@ -1,20 +1,21 @@
 import Alert from "./alert";
 import Footer from "./footer";
 import Meta from "./meta";
+import BaseLayout from "./_base-layout";
 
 type Props = {
   preview?: boolean;
   children: React.ReactNode;
+  mainHeader: string;
 };
 
-const PostLayout = ({ preview, children }: Props) => {
+const PostLayout = ({ preview, children, mainHeader }: Props) => {
   return (
     <>
       <Meta />
-      <div className="min-h-screen">
-        <Alert preview={preview} />
+      <BaseLayout supHeader="Blog:" mainHeader={mainHeader}>
         <main>{children}</main>
-      </div>
+      </BaseLayout>
       {/* <Footer /> */}
     </>
   );

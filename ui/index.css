@@ -22,13 +22,12 @@ html,body {
 
 .page-wrap {
   margin: 0 auto;
-  max-width: 1600px; 
+  max-width: 1280px; 
   width: 100%;
 }
 
 body {
-  /* background-color: theme('colors.matt-black'); */
-  background:rgb(14,14,14);
+  background-color: theme('colors.stella-purple');
   color: whitesmoke;
 }
 

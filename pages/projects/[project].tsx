@@ -3,8 +3,6 @@ import ErrorPage from "next/error";
 import projects, { IProject } from "../../data/projects";
 import ProjectLayout from "../../components/project-layout";
 import Container from "../../components/container";
-import Header from "../../components/header";
-import Head from "next/head";
 
 type Props = {
   project: IProject;
@@ -21,22 +19,7 @@ export default function Project({ project }: Props) {
   if (!router.isFallback && !project?.id) {
     return <ErrorPage statusCode={404} />;
   }
-  return (
-    <ProjectLayout>
-      <Container>
-        <Header />
-        <Head>
-          <title>{title}</title>
-          <meta property="og:image" content={project.img} />
-        </Head>
-        {router.isFallback ? (
-          <p>...loading project...</p>
-        ) : (
-          <div>OH YES HI THIS IS THE {project.name} page!</div>
-        )}
-      </Container>
-    </ProjectLayout>
-  );
+  return <ProjectLayout project={project} />;
 }
 
 // GIVES THE DATA TO A SPECIFIC PAGE BASED ON THE `PATH`

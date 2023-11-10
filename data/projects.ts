@@ -1,3 +1,5 @@
+
+
 export interface IProject {
   id: string
   name: string
@@ -13,7 +15,7 @@ const projects: IProject[] = [
     name: "DashDoor",
     img: "dashdoor.jpg",
     description: 'Cool info about dashdoor',
-    demoURL: 'dashdoor.sigouin.com',
+    demoURL: 'http://dashdoor.sigouin.com',
     gitURL: 'https://github.com/sigouin/dashdoor'
   },
   {
@@ -21,7 +23,7 @@ const projects: IProject[] = [
     name: "whackamole",
     img: "whackamole.jpg",
     description: 'Cool info about whackamole',
-    demoURL: 'whackamole.sigouin.com',
+    demoURL: 'http://whackamole.sigouin.com',
     gitURL: 'https://github.com/sigouin/whackamole'
   },
   {
@@ -29,15 +31,15 @@ const projects: IProject[] = [
     name: "package.json crawler",
     img: "package.json crawler.jpg",
     description: 'Cool info about package.json crawler',
-    demoURL: 'packagejsoncrawler.sigouin.com',
+    demoURL: 'http://packagejsoncrawler.sigouin.com',
     gitURL: 'https://github.com/sigouin/packagejsoncrawler'
   },
   {
     id: "ratingcomponent",
     name: "rating component",
-    img: "rating component.jpg",
+    img: "ratingcomp.png",
     description: 'Cool info about rating component',
-    demoURL: 'ratingcomponent.sigouin.com',
+    demoURL: 'http://ratingcomponent.sigouin.com',
     gitURL: 'https://github.com/sigouin/ratingcomponent'
   },
 ]

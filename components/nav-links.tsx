@@ -27,7 +27,11 @@ export default function NavLinks() {
               >
                 <SeñorLinkenStein aDonde={asPath}>
                   <button
-                    className={router.asPath === asPath ? `bg-[#ff00ff]` : ""}
+                    className={
+                      router.asPath === asPath
+                        ? `bg-pip-purple text-stella-purple`
+                        : ""
+                    }
                   >
                     {name}
                   </button>
