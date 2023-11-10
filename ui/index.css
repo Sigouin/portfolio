@@ -46,3 +46,18 @@ body {
   right: 0;
   background: theme('colors.pip-purple')
 }
+
+.h2-accent-left {
+  position: relative;
+}
+
+.h2-accent-left:after {
+  content: '';
+  display: block;
+  height: 50%;
+  position: absolute;
+  width: 4px;
+  left: 0;
+  background: theme('colors.pip-purple')
+}
+

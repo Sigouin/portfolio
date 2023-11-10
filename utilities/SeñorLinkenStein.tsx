@@ -8,10 +8,4 @@ const SeñorLinkenStein = ({ children: misHijos, aDonde, ...todo }: any) => {
   );
 };
 
-// Dónde estoy
-
-// solo quería darle estilo a un botón
-// mucho habre
-
-// Envía ayuda o unos tacos cualquiera servirá.
 export default SeñorLinkenStein;

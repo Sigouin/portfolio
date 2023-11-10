@@ -15,4 +15,3 @@ export const paths: TPaths = Object.values(EPaths).reduce((prevValue, currentVal
   ...{ [currentValue]: dynamicRoute(currentValue) }
 }), {})
 
-// Came to style a button, stayed for the LinkMaster5000

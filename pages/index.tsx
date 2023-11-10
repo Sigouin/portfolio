@@ -29,7 +29,7 @@ export default function Index({ allPosts }: Props) {
           <title>Sigouin.Codes</title>
         </Head>
         <Container>
-          <section className="bg-stella-purple page-wrap p-16">
+          <section className="bg-stella-purple page-wrap p-16 ">
             <header>
               <span className="text-2xl">Hello, I&apos;m</span>
               <h1 className="text-7xl leading-none">Matt Sigouin</h1>

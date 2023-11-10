@@ -9,16 +9,13 @@ import projects from "../data/projects";
 import { paths } from "../data/paths";
 import SeñorLinkenStein from "../utilities/SeñorLinkenStein";
 
-// Sálvame por favor
-// no recuerdo como hablar ingles
-// 😭
 export default function NavLinks() {
   const pathname = usePathname();
   const router = useRouter();
 
   return (
     <nav className="mt-12">
-      <h2 className="text-4xl">Projects</h2>
+      <h2 className="text-4xl h2-accent-left">Projects</h2>
       <div className="flex items-center justify-between mt-4 w-full">
         <ul className="flex gap-4 ml-12 text-2xl">
           {projects.map(({ id, name }, i) => {

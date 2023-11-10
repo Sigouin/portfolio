@@ -16,14 +16,6 @@ type Params = {
 };
 
 export default function Project({ project }: Props) {
-  // {
-  //   id: "dashdoor",
-  //   name: "DashDoor",
-  //   img: "dashdoor.jpg",
-  //   description: 'Cool info about dashdoor',
-  //   demoURL: 'dashdoor.sigouin.com',
-  //   gitURL: 'https://github.com/sigouin/dashdoor'
-  // }
   const router = useRouter();
   const title = `${project.name} | A Project by Matt Sigouin`;
   if (!router.isFallback && !project?.id) {
