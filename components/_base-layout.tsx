@@ -34,13 +34,20 @@ const BaseLayout = ({
         <main className="flex flex-col items-center justify-between flex-grow py-8 lg:flex-row">
           <aside className="max-w-sm">
             {img?.src && (
-              <figure className="overflow-hidden rounded-md shadow-2xl">
+              <figure className="block overflow-hidden rounded-md shadow-2xl h-[459px] w-[459px] relative">
                 <Image
-                  className="scale-105"
+                  className="scale-105 absolute inset-none z-10"
+                  src={"/images/pic2-hover.png"}
+                  alt={img?.alt}
+                  height={459}
+                  width={459}
+                />
+                <Image
+                  className="scale-105 absolute inset-none z-20 opacity-100 transition-opacity ease-in duration-0 hover:opacity-0 hover:duration-[2000ms]"
                   src={img?.src}
                   alt={img?.alt}
-                  height={600}
-                  width={438}
+                  height={459}
+                  width={459}
                 />
               </figure>
             )}
