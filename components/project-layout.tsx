@@ -4,6 +4,7 @@ import Meta from "./meta";
 import BaseLayout from "./_base-layout";
 import { IProject } from "../data/projects";
 import Head from "next/head";
+import { BiHomeAlt } from "react-icons/bi";
 
 type Props = {
   preview?: boolean;
@@ -32,6 +33,7 @@ const ProjectLayout = ({ preview, children, project }: Props) => {
         <meta property="og:image" content={project.img} />
       </Head>
       <BaseLayout
+        homeButtonDisplayed={true}
         supHeader="Project:"
         mainHeader={project.name}
         details={
