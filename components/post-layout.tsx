@@ -13,7 +13,7 @@ const PostLayout = ({ preview, children, mainHeader }: Props) => {
   return (
     <>
       <Meta />
-      <BaseLayout supHeader="Blog:" mainHeader={mainHeader}>
+      <BaseLayout supHeader="Blog:" mainHeader={mainHeader} details="">
         <main>{children}</main>
       </BaseLayout>
       {/* <Footer /> */}
