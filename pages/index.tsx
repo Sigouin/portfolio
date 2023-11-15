@@ -1,14 +1,16 @@
-import Container from "../components/container";
 import MoreStories from "../components/more-stories";
 import HeroPost from "../components/hero-post";
-import Intro from "../components/intro";
-import Layout from "../components/layout";
+import HomeLayout from "../components/home-layout";
 import { getAllPosts } from "../lib/api";
 import Head from "next/head";
 import { CMS_NAME } from "../lib/constants";
 import Post from "../interfaces/post";
-import pic from "public/assets/Images/pic.png";
-import Image from "next/image";
+import { BiLogoGithub, BiLogoLinkedin } from "react-icons/bi";
+import { MdOutlineAlternateEmail } from "react-icons/md";
+import NavLinks from "../components/nav-links";
+
+import projects from "../data/projects";
+import Link from "next/link";
 
 type Props = {
   allPosts: Post[];
@@ -19,33 +21,11 @@ export default function Index({ allPosts }: Props) {
   const morePosts = allPosts.slice(1);
   return (
     <>
-      <Layout>
+      <HomeLayout>
         <Head>
-          <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
+          <title>Sigouin.Codes</title>
         </Head>
-        <div className="flex justify-center items-center h-full">
-          <Image
-            className="rounded-lg b w-120 shadow-[0_45px_60px_-15px_rgba(0,0,0,0.3)]"
-            src={pic}
-            alt="Rhino Man"
-          />
-          <h1>Coming Soon</h1>
-        </div>
-        {/* <Container> */}
-        {/* <Intro />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        </Container> */}
-      </Layout>
+      </HomeLayout>
     </>
   );
 }

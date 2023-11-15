@@ -4,11 +4,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "accent-1": "#FAFAFA",
-        "accent-2": "#EAEAEA",
-        "accent-7": "#333",
-        success: "#0070f3",
-        cyan: "#79FFE1",
+        "matt-black": "#1C1A27",
+        "pip-purple": "#CFBCFF",
+        "stella-purple": "#1C1927",
+        "gradient-color-1": "#00ff00",
+        "gradient-color-2": "#ff0000",
       },
       spacing: {
         28: "7rem",
@@ -32,6 +32,7 @@ module.exports = {
       boxShadow: {
         sm: "0 5px 10px rgba(0, 0, 0, 0.12)",
         md: "0 8px 30px rgba(0, 0, 0, 0.12)",
+        "2xl": "0 25px 50px -12px rgb(0 0 0 / 0.25)",
       },
     },
   },
