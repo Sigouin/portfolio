@@ -34,10 +34,6 @@ const ProjectLayout = ({ preview, children, project }: Props) => {
       <BaseLayout
         supHeader="Project:"
         mainHeader={project.name}
-        img={{
-          src: `/images/${project.img}`,
-          alt: project.name,
-        }}
         details={
           <>
             <p>{project.description}</p>

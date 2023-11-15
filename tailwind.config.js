@@ -7,6 +7,8 @@ module.exports = {
         "matt-black": "#1C1A27",
         "pip-purple": "#CFBCFF",
         "stella-purple": "#1C1927",
+        "gradient-color-1": "#00ff00",
+        "gradient-color-2": "#ff0000",
       },
       spacing: {
         28: "7rem",

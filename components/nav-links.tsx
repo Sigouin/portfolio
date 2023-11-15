@@ -15,15 +15,17 @@ export default function NavLinks() {
 
   return (
     <nav className="mt-12">
-      <h2 className="text-4xl h2-accent-left">Projects</h2>
-      <div className="flex items-center justify-between mt-4 w-full">
-        <ul className="flex gap-4 ml-12 text-2xl">
+      <h2 className="text-4xl border-b-4 border-pip-purple">Projects</h2>
+      <div className="flex flex-col md:flex-row md:items-center justify-between mt-4 w-full">
+        <ul className="flex flex-col md:flex-row gap-4 text-2xl">
           {projects.map(({ id, name }, i) => {
             const asPath = paths.projects(id).toString();
             return (
               <li
                 key={id}
-                className={i !== 0 ? "before:content-['|'] before:pr-4" : ""}
+                className={
+                  i !== 0 ? "md:before:content-['|'] md:before:pr-4" : ""
+                }
               >
                 <SeñorLinkenStein aDonde={asPath}>
                   <button
@@ -40,7 +42,7 @@ export default function NavLinks() {
             );
           })}
         </ul>
-        <ul className="flex gap-2">
+        <ul className="flex mt-12 md:mt-0 gap-2">
           <li>
             <a href="https://github.com/Sigouin" target="_blank">
               <BiLogoGithub className="text-2xl" />

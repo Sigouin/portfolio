@@ -2,11 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-*,*:before,*:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
-html,body {
+html,
+body,
+#__next {
   margin: 0;
   height: 100%;
   width: 100%;
@@ -22,41 +26,56 @@ html,body {
 
 .page-wrap {
   margin: 0 auto;
-  max-width: 1280px; 
+  max-width: 1280px;
   width: 100%;
 }
 
 body {
-  background-color: theme('colors.stella-purple');
+  background-color: theme("colors.stella-purple");
   color: whitesmoke;
 }
 
 .p-accent-right {
   padding-right: 30px;
   position: relative;
-}
-.p-accent-right:after {
-  content: '';
-  display: block;
-  height: 50%;
-  position: absolute;
-  width: 4px;
-  top: 8px;
-  right: 0;
-  background: theme('colors.pip-purple')
+
+  @screen md {
+    &:after {
+      content: "";
+      display: block;
+      height: 50%;
+      position: absolute;
+      width: 4px;
+      top: 8px;
+      right: 0;
+      background: theme("colors.pip-purple");
+    }
+  }
 }
 
-.h2-accent-left {
-  position: relative;
+@layer utility {
+  .corner-accent {
+    @apply w-72 h-72 pointer-events-none absolute ;
+    background-image: linear-gradient(
+      135deg,
+      #ffffff 0%,
+      theme("colors.pip-purple") 30%,
+      theme("colors.pip-purple") 100%
+    );
+    mask-image: url("./assets/corner.svg");
+    mask-clip: fill-box;
+  }
 }
 
-.h2-accent-left:after {
-  content: '';
-  display: block;
-  height: 50%;
-  position: absolute;
-  width: 4px;
-  left: 0;
-  background: theme('colors.pip-purple')
+.corner-accent-tl {
+  @apply corner-accent top-0 left-0;
 }
-
+.corner-accent-tr {
+  @apply corner-accent top-0 right-0 rotate-90;
+}
+.corner-accent-bl {
+  @apply corner-accent bottom-0 left-0 -rotate-90;
+}
+.corner-accent-br {
+  @apply corner-accent bottom-0 right-0 rotate-180;
+}
