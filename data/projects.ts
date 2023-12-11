@@ -22,7 +22,7 @@ const projects: IProject[] = [
     id: "packagejsoncrawler",
     name: "package.json crawler",
     img: "package.json crawler.jpg",
-    description: 'Crawling through your package.json and checking your deps.',
+    description: 'This project is designed to crawl through multiple package.json files and check the versions of their dependencies against the root package.json.',
     demoURL: 'https://github.com/Sigouin/crawler',
     gitURL: 'https://github.com/Sigouin/crawler'
   },
